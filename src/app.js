@@ -17,7 +17,7 @@ app.get("/products", async (req, res) => {
 
         const { limit } = req.query
         if (limit){
-            const productFilter = products.slice(0, req.query.limit)
+            const productFilter = products.slice(0, limit)
             return res.json({message: productFilter})
         }
 
